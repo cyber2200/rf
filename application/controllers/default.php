@@ -8,7 +8,10 @@ class DefaultController
 	
 	public function indexAction()
 	{
+		$defaultModel = new DefaultModel();
+		$viewValues['test'] = $defaultModel->test();
 		$viewRender = new ViewRender();
+		$viewRender->assignValues($viewValues);
 		$viewRender->setViewFile($this->viewFile);
 		$viewRender->render();
 	}
