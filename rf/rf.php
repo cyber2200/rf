@@ -5,7 +5,10 @@ DEFINE("DEFAULT_ACTION", "index");
 
 if (file_exists(CONFIG_FILE))
 {
-	$configTxt = file_get_contents(CONFIG_FILE);
+	include('./rf/bootstrap.php');
+	$bootstrap = new Bootstrap();
+	$bootstrap->init();
+	
 	include('./rf/viewRender.php');
 	include('./rf/router.php');
 }

@@ -29,6 +29,7 @@ include('./application/controllers/'. $controller .'.php');
 // Create a controller object.
 $className = $controller . 'Controller';
 $controllerObj = new $className;
+$controllerObj->setBootstrap($bootstrap);
 
 // Firing the action.
 call_user_method($action . 'Action', $controllerObj);

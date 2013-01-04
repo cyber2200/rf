@@ -5,9 +5,16 @@
 class DefaultController
 {
 	protected $viewFile = 'default';
+	protected $bootstrapObj;
+	
+	public function setBootstrap($bootstrapObj)
+	{
+		$this->bootstrapObj = $bootstrapObj;
+	}
 	
 	public function indexAction()
 	{
+		$viewValues['testXml'] = $this->bootstrapObj->getConfigObj();
 		$defaultModel = new DefaultModel();
 		$viewValues['test'] = $defaultModel->test();
 		$viewRender = new ViewRender();
