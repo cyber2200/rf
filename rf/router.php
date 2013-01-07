@@ -21,10 +21,10 @@ else
 	$action = DEFAULT_ACTION;
 }
 // Including the models class file.
-include('./application/models/'. $controller .'.php');
+include('../application/models/'. $controller .'.php');
 
 // Including the controller class file.
-include('./application/controllers/'. $controller .'.php');
+include('../application/controllers/'. $controller .'.php');
 
 // Create a controller object.
 $className = $controller . 'Controller';

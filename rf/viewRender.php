@@ -20,6 +20,6 @@ class ViewRender
 		{
 			$$k = $v;
 		}
-		include('./application/views/' . $this->file . '.html');
+		include('../application/views/' . $this->file . '.html');
 	}
 }

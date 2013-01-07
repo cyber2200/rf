@@ -17,6 +17,9 @@ class DefaultController
 		$viewValues['testXml'] = $this->bootstrapObj->getConfigObj();
 		$defaultModel = new DefaultModel();
 		$viewValues['test'] = $defaultModel->test();
+		
+		$configObj = $this->bootstrapObj->getConfigObj();
+		$viewValues['appUrl'] = (string)$configObj->appUrl;
 		$viewRender = new ViewRender();
 		$viewRender->assignValues($viewValues);
 		$viewRender->setViewFile($this->viewFile);
