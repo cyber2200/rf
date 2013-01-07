@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <appConfig>
-	<appUrl>http://system1/devs/ranDev/rf/public/</appUrl>
+	<appUrl>http://192.168.2.107/devs/ranDev/rf/public/</appUrl>
 	<appFsRoot>/var/www/devs/ranDev/rf</appFsRoot>
 </appConfig>

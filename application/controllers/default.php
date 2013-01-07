@@ -22,6 +22,7 @@ class DefaultController
 		$viewValues['appUrl'] = (string)$configObj->appUrl;
 		$viewRender = new ViewRender();
 		$viewRender->assignValues($viewValues);
+		$viewRender->setLayout('layout');
 		$viewRender->setViewFile($this->viewFile);
 		$viewRender->render();
 	}
