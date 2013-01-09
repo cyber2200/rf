@@ -20,11 +20,23 @@ else
 {
 	$action = DEFAULT_ACTION;
 }
-// Including the models class file.
-include('../application/models/'. $controller .'.php');
+// Including the model class file.
+$modelPath = '../application/models/'. $controller .'.php';
+if (file_exists($modelPath))
+{
+	include($modelPath);
+}
 
 // Including the controller class file.
-include('../application/controllers/'. $controller .'.php');
+$controllerPath = '../application/controllers/'. $controller .'.php';
+if (file_exists($controllerPath))
+{
+	include('../application/controllers/'. $controller .'.php');
+}
+else
+{
+	echo ("Can't load controller");
+}
 
 // Create a controller object.
 $className = $controller . 'Controller';
